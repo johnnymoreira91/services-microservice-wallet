@@ -28,14 +28,18 @@ describe('CreateUserUseCase test', () => {
     expect(data.email).toBe('superTest@test.com')
   })
 
-  // test('It Should give error to duplicate users', async () => {
-  //   const user: Omit<User, 'id'> = {
-  //     name: 'superTest',
-  //     email: 'superTest@test.com',
-  //     password: 'test'
-  //   }
+  test('It Should give error to duplicate users', async () => {
+    const user: Omit<User, 'id'> = {
+      name: 'superTest',
+      email: 'superTest@test.com',
+      password: 'test'
+    }
 
-  //   const data = await createUserUseCase.execute(user)
-  //   expect(data).toBeInstanceOf(Error)
-  // })
+    try {
+      const data = await createUserUseCase.execute(user)
+      expect(data.name).toBe('superTest')
+    } catch (error) {
+      expect(error.message).toBe('User already exist')
+    }
+  })
 })
