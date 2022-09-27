@@ -1,7 +1,7 @@
 /* eslint-disable no-path-concat */
 import express from 'express'
 import morganMiddleware from './middlewares/morganMiddleware'
-import userRoute from './routes/userRoute'
+import walletRoute from './routes/walletRoute'
 import cors from 'cors'
 import dotenv from 'dotenv'
 dotenv.config()
@@ -13,7 +13,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(cors())
 
-app.use('/user', userRoute)
+app.use('/wallet', walletRoute)
 
 app.get('/', (request, response) => {
   return response.json({ message: 'Welcame to SOLID nodejs API' })

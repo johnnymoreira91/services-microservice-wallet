@@ -13,6 +13,10 @@ class WalletRepository implements IWalletRepository {
     return WalletModel.query().where('wallet_number', wallet_number).first()
   }
 
+  async findByOwner (owner_id: string): Promise<Wallet> {
+    return WalletModel.query().where('owner_id', owner_id).first()
+  }
+
   async update (wallet: Wallet): Promise<Wallet> {
     await database.transaction(async trx => {
       await WalletModel.query(trx).update({ ...wallet })
