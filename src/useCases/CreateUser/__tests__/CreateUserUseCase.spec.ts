@@ -1,5 +1,5 @@
 import { CreateUserUseCase } from '../CreateUserUseCase'
-import { UsersRepository } from '@repositories/implementations/UsersRepository'
+import { UsersRepository } from '@repositories/implementations/WalletrRepository'
 import { User } from '@entities/User'
 import { InsertMock } from '@utils/mock'
 

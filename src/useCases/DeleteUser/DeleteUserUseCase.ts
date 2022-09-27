@@ -1,5 +1,5 @@
 import { IDeleteUserRequestDTO } from './DeleteUserDTO'
-import { IUsersRepository } from '@repositories/IUsersRepository'
+import { IUsersRepository } from '@repositories/IWalletrepository'
 
 class DeleteUserUseCase {
   constructor (

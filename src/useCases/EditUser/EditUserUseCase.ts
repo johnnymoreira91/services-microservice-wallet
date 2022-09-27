@@ -1,5 +1,5 @@
 import { User } from '@entities/User'
-import { IUsersRepository } from '@repositories/IUsersRepository'
+import { IUsersRepository } from '@repositories/IWalletrepository'
 import { IEditUserRequestDTO } from './EditUserDTO'
 
 class EditUserUseCase {

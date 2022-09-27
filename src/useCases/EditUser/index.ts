@@ -1,4 +1,4 @@
-import { UsersRepository } from '@repositories/implementations/UsersRepository'
+import { UsersRepository } from '@repositories/implementations/WalletrRepository'
 import { EditUserController } from './EditUserController'
 import { EditUserUseCase } from './EditUserUseCase'
 

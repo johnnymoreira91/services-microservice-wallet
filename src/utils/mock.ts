@@ -1,4 +1,4 @@
-import { UsersRepository } from '@repositories/implementations/UsersRepository'
+import { UsersRepository } from '@repositories/implementations/WalletrRepository'
 import { CreateUserUseCase } from '@useCases/CreateUser/CreateUserUseCase'
 import { User } from '@entities/User'
 
