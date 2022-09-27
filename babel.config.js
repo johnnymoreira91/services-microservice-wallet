@@ -14,6 +14,7 @@ module.exports = {
     ['module-resolver', {
       alias: {
         '@infra': './src/infra',
+        '@database': './src/infra/database',
         '@entities': './src/entities',
         '@repositories': './src/repositories',
         '@providers': './src/providers',
